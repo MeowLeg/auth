@@ -7,7 +7,7 @@ auth是用于微信公众号网页认证的系统，采用go-template微服务�
 ##使用配置
 
 * 配置middle.db数据库的weixin表。数据库中的weixin表存储公众号信息，四个字段分别是公众号、appid、appsecret、access_token。其中access_token需要定时获取，这里已经写了一个timerTask.go，用于每小时更新一次。
-* 
+
     ```sql
     create table if not exists weixin (
         weixin text unique,
